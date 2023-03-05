@@ -68,8 +68,8 @@ const Home = () => {
           <aside className="w-full h-[400px] relative" data-aos="fade-right">
             <Image
               src={'/images/how-we-work-illustration.svg'}
-              layout="fill"
-              objectFit="fill"
+            width={400}
+            height={400}
               alt="Structured plan"
             />
           </aside>

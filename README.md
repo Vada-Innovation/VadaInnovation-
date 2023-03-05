@@ -10,4 +10,3 @@ Vada Innovation is a cutting-edge startup based in Colchester, England, that pro
  - [React Icon](https://github.com/react-icons/react-icons) - A library that include so many popular icons with SVG based
  - [AOS](https://github.com/michalsnik/aos) - A library to help control animation when scroll
  
-
