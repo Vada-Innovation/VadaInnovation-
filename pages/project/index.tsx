@@ -31,7 +31,7 @@ const Project = () => {
     },
   ]
   return (
-    <PageTemplate title="Project - Collosal">
+    <PageTemplate title="Project - Vada Innovation">
       <section className="flex flex-col items-center gap-5 md:flex-row md:justify-between">
         <aside
           className="w-full sm:w-10/12 grid grid-cols-1 place-items-center gap-12 md:place-items-start md:w-8/12 lg:w-6/12"

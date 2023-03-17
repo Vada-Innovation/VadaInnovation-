@@ -21,7 +21,7 @@ import IconListItem from 'components/molecules/IconListItem'
 const Services = () => {
   return (
     <>
-      <PageTemplate title='Service - Collosal'>
+      <PageTemplate title='Service - Vada Innovation'>
         <section className="grid place-items-center" data-aos="zoom-in-up">
           <div className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12">
             <PageSentence

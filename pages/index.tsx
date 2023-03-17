@@ -14,7 +14,7 @@ import { FiFigma, FiCode, FiBox } from 'react-icons/fi'
 const Home = () => {
   return (
     <>
-      <PageTemplate title="Home - Collosal">
+      <PageTemplate title="Home - Vada Innovation">
         {/* Banner Section */}
         <section
           className="flex flex-col gap-10 items-center"
@@ -67,7 +67,7 @@ const Home = () => {
         <section className="grid grid-cols-1 gap-6 sm:gap-8 place-items-center lg:grid-cols-2">
           <aside className="w-full h-[400px] relative" data-aos="fade-right">
             <Image
-              src={'/images/how-we-work-illustration.svg'}
+              src={'/images/team-illustration.svg'}
             width={400}
             height={400}
               alt="Structured plan"

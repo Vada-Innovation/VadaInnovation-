@@ -10,22 +10,22 @@ import randomString from 'utils/randomString'
 const Blog = () => {
   const blogListData: BlogCardProps[] = [
     {
-      authorAvatarSrc: '/images/blog-author-1.webp',
-      authorName: 'Jane Cooper',
+      authorAvatarSrc: '/images/blog-author-1.svg',
+      authorName: 'Abdullah Mujahid',
       launchDate: 'Mar 18',
-      lead: 'People have been using wrong SEO techniques on their websites.',
-      readTime: '5 min',
+      lead: 'Power of pattern matching in Python',
+      readTime: '2 min',
       thumbnailSrc: '/images/blog-thumbnail-1.webp',
-      title: 'SEO tricks that can increase the traffic of your website',
+      title: 'Structural Pattern Matching in Python is a game-changer!',
     },
     {
-      authorAvatarSrc: '/images/blog-author-2.webp',
-      authorName: 'Alex Berner',
+      authorAvatarSrc: '/images/blog-author-1.svg',
+      authorName: 'Abdullah Mujahid',
       launchDate: 'Mar 11',
-      lead: 'All these plugins are free and you can use them forever',
-      readTime: '3 min',
-      thumbnailSrc: '/images/blog-thumbnail-2.webp',
-      title: '10 Figma Plugins that will increase your productivity',
+      lead: 'Fresh is a new server-side rendering framework',
+      readTime: '2 min',
+      thumbnailSrc: '/images/blog-thumbail-02.gif',
+      title: 'Why Fresh is the Best Choice for Server-Side Rendering',
     },
     {
       authorAvatarSrc: '/images/blog-author-3.webp',

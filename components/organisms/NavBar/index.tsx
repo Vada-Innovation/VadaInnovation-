@@ -63,6 +63,7 @@ const NavBar = () => {
                   isOpen ? '' : 'hidden '
                 }space-y-5 mt-4 lg:mt-0 lg:space-y-0 lg:space-x-16 lg:flex lg:place-items-center`}
               >
+                <NavLink href="/" value="Home" canActive={true} />
                 <NavLink href="/service" value="Services" canActive={true} />
                 <NavLink
                   href="/how-we-work"

@@ -21,7 +21,7 @@ const HowWeWork = () => {
         <aside className="w-full" data-aos="fade-up-right">
           <div className="w-full h-[410px] relative">
             <Image
-              src={'/images/discuss-illustration.webp'}
+              src={'/images/discuss-illustration.svg'}
               quality={100}
               layout="fill"
               objectFit="contain"

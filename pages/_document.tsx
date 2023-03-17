@@ -5,9 +5,9 @@ const Document = () => {
   return (
     <Html lang='en'>
       <Head>
-          <meta name="description" content="An company profile of Collosal Company. Its company that serve for Application Development (Mobile, Web and Desktop), UI UX Design and Maintenance" />
+          <meta name="description" content="An company profile of Vada Innovation Company. Its company that serve for Application Development (Mobile, Web and Desktop), UI UX Design and Maintenance" />
           <meta name="robots" content="index, follow" />
-          <meta name='tags' content='web,app,ui,maintenance,company,collosal,profile' />
+          <meta name='tags' content='web,app,ui,maintenance,company,Vada Innovation,profile' />
         <link
           rel="shortcut icon"
           href="/images/favicon.svg"
