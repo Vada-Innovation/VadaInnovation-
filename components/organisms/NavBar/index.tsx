@@ -70,7 +70,7 @@ const NavBar = () => {
                   value="How We Work"
                   canActive={true}
                 />
-                <NavLink href="/project" value="Project" canActive={true} />
+                {/* <NavLink href="/project" value="Project" canActive={true} /> */}
                 <NavLink href="/about" value="About" canActive={true} />
               </div>
               <div
