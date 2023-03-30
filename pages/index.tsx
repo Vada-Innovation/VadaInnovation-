@@ -169,7 +169,7 @@ const Home = () => {
               title="Book a meeting with us to discuss your project"
               badge="GET STARTED"
             />
-                        <div className="calendly-inline-widget" data-url="https://calendly.com/abdullahmujahidali1/15min" style={{ minWidth: '320px', height: '630px' }}></div>
+              <div className="calendly-inline-widget" data-url="https://calendly.com/abdullahmujahidali1/15min" style={{ minWidth: '320px', height: '630px' }}></div>
           </div>
           {/* <div className="w-full grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"> */}
             {/* <div data-aos="fade-up-right">

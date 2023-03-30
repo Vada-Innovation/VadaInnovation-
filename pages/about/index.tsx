@@ -60,7 +60,7 @@ const About = () => {
         >
           <SectionSentence
             badge="OUR TEAMS"
-            title="Meet the team! All creative people are here"
+            title="Meet the leaders of Vada Innovation"
           />
         </div>
         <div className="w-full grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
@@ -81,8 +81,8 @@ const About = () => {
           <div data-aos="fade-up">
           <TeamCard
               imageSrc="/images/team-1.jpeg"
-              job="Co-Founder | Chief Technology Officer"
-              name="Abdullah Mujahid"
+              job="Co-Founder | Chief chief Operating Officer"
+              name="Abdul Wahid"
             />
           </div>
         </div>
