@@ -1,3 +1,7 @@
+import Head from 'next/head';
+
+import { useEffect } from 'react';
+
 import ButtonLink from 'components/atoms/Button/ButtonLink'
 import LineDivider from 'components/atoms/LineDivider'
 import FeatureCard from 'components/molecules/Card/FeatureCard'
@@ -12,8 +16,21 @@ import Image from 'next/image'
 import React from 'react'
 import { FiFigma, FiCode, FiBox } from 'react-icons/fi'
 const Home = () => {
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    }
+  }, []);
   return (
     <>
+    <Head>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      </Head>
       <PageTemplate title="Home - Vada Innovation">
         {/* Banner Section */}
         <section
@@ -192,6 +209,9 @@ const Home = () => {
             </div>
           </div>
         </section>
+        {/* <!-- Calendly inline widget begin --> */}
+        <div className="calendly-inline-widget" data-url="https://calendly.com/abdullahmujahidali1/15min" style={{ minWidth: '320px', height: '630px' }}></div>
+{/* <!-- Calendly inline widget end --> */}
         {/* Testimonial */}
         <section className="flex flex-col gap-16 items-center">
           <div className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12" data-aos="zoom-in-up">
