@@ -166,12 +166,13 @@ const Home = () => {
             data-aos="zoom-in-up"
           >
             <SectionSentence
-              title="What do you need? Choose a service that can help you"
+              title="Book a meeting with us to discuss your project"
               badge="GET STARTED"
             />
+                        <div className="calendly-inline-widget" data-url="https://calendly.com/abdullahmujahidali1/15min" style={{ minWidth: '320px', height: '630px' }}></div>
           </div>
-          <div className="w-full grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
-            <div data-aos="fade-up-right">
+          {/* <div className="w-full grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"> */}
+            {/* <div data-aos="fade-up-right">
               <PricingCard
                 price="1200$"
                 title="UI Design"
@@ -207,11 +208,8 @@ const Home = () => {
                 ]}
               />
             </div>
-          </div>
+          </div> */}
         </section>
-        {/* <!-- Calendly inline widget begin --> */}
-        <div className="calendly-inline-widget" data-url="https://calendly.com/abdullahmujahidali1/15min" style={{ minWidth: '320px', height: '630px' }}></div>
-{/* <!-- Calendly inline widget end --> */}
         {/* Testimonial */}
         <section className="flex flex-col gap-16 items-center">
           <div className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12" data-aos="zoom-in-up">
