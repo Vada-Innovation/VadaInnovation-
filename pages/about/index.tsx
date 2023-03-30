@@ -81,7 +81,7 @@ const About = () => {
           <div data-aos="fade-up">
           <TeamCard
               imageSrc="/images/team-1.jpeg"
-              job="Co-Founder | Chief chief Operating Officer"
+              job="Co-Founder | Chief Operating Officer"
               name="Abdul Wahid"
             />
           </div>
