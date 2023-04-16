@@ -35,8 +35,9 @@ const Quote = () => {
                 <InputGroup label="Name" />
                 <InputGroup label="Email" />
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                <InputGroup label="Company" />
+              <div className="grid grid-cols-1 gap-4">
+              <InputGroup label="Phone Number" />
+                {/* <InputGroup label="Company" />
                 <SelectGroup
                   label="Company Size"
                   options={[
@@ -44,7 +45,7 @@ const Quote = () => {
                     { label: 'Medium', value: 'medium' },
                     { label: 'Large', value: 'large' },
                   ]}
-                />
+                /> */}
               </div>
               <TextAreaGroup label="Tell Us Your Problem" />
               <Button value="Send Quote" />
