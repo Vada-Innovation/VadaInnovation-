@@ -42,7 +42,7 @@ const Footer = () => {
             <div className="space-y-5">
               <Text value="COMPANY" textStyle="FooterLinkGroupTitle" />
               <div className="space-y-[10px]">
-                <NavLink value="About" href="/about" />
+                {/* <NavLink value="About" href="/about" /> */}
                 <NavLink value="Contact" href="/contact" />
                 <NavLink value="Send Quote" href="/quote" />
                 {/* <NavLink value="Privacy Policy" href="/privacy-policy" />
