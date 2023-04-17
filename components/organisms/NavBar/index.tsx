@@ -32,16 +32,17 @@ const NavBar = () => {
   }, [isOpen])
   return (
     <>
+
       <nav
         className={`pt-8 w-full top-0 left-0 z-30 ${
-          isScrolled ? 'fixed' : 'absolute'
+          isScrolled ? 'absolute' : 'absolute' //add fixed for sticky
         }`}
       >
         <Container>
           <div
             className={`${
               browserName == 'Firefox' ? 'bg-gray-900' : 'bg-light'
-            } px-6 py-4 w-full rounded-md backdrop-blur-3xl ${
+            } px-6  w-full rounded-md backdrop-blur-3xl ${
               isScrolled || isOpen ? '' : 'lg:bg-transparent lg:px-0'
             }`}
           >
