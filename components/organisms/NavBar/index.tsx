@@ -32,10 +32,9 @@ const NavBar = () => {
   }, [isOpen])
   return (
     <>
-
       <nav
         className={`pt-8 w-full top-0 left-0 z-30 ${
-          isScrolled ? 'absolute' : 'absolute' //add fixed for sticky
+          isScrolled ? 'absolute' : 'absolute'
         }`}
       >
         <Container>
