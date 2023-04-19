@@ -41,8 +41,8 @@ const HowWeWork = () => {
         <aside className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left" data-aos="fade-up-right">
           <SectionSentence
             badge="STEP 02"
-            title={`Doing planning, design and development until everything is finished`}
-            paragraph="When everything is agreed upon, our team will make plans related to the application that will be created. Starting from analysis, design, to development. <br> <br> In this step, the application is 100% complete."
+            title={`Planning, design and developing your idea`}
+            paragraph="When everything is agreed upon our team will take your project from start to finish in the promised time. "
           />
         </aside>
         <aside className="w-full" data-aos="fade-up-left">
@@ -73,7 +73,7 @@ const HowWeWork = () => {
           <SectionSentence
             badge="STEP 03"
             title={`The project is complete and we ship all the project assets, and access to the server`}
-            paragraph="We will be responsible for delivering all the project assets to you, don't worry. These assets include, design files, source code, server access, and so on. <br> <br> In this step, everything is done and the contract ends."
+            paragraph="We will be responsible for delivering all the project assets to you. These assets include, design files, source code, server access, and so on. <br> <br> In this step, everything is done and the contract ends."
           />
         </aside>
       </section>

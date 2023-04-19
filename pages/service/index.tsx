@@ -47,13 +47,13 @@ const Services = () => {
               <SectionSentence
                 badge="UI DESIGN"
                 title="Don't let your idea get caught by others, design a prototype for your idea"
-                paragraph="Delegate your ideas as quickly as possible, create beautiful designs and vivid prototypes."
+                paragraph="Delegate your ideas as quickly as possible, create aesthetics designs and vivid prototypes."
               />
             </div>
             <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
               <aside className="w-full grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <SmallCardIcon
-                  title="Beautiful Design"
+                  title="Aesthetics Design"
                   description="Create a modern design for your idea."
                   icon={<FiLayout />}
                 />

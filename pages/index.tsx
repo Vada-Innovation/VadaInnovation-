@@ -39,8 +39,8 @@ const Home = () => {
         >
           <div className="w-10/12 md:w-8/12 text-center">
             <PageSentence
-              title="We Deliver what we promise."
-              description="We are committed to not making clients wait. We will deliver the work as quickly as possible. Even on the same day. Even so, we do not reduce the quality of our work."
+              title=" One place for all your software problems."
+              description="Vada Innovation is a software house with bright solutions for web/mobile application development and UI design."
               badge="CLIENT-DEVELOPMENT-DRIVEN"
             />
           </div>
