@@ -6,8 +6,11 @@ import ButtonLink from 'components/atoms/Button/ButtonLink'
 import LineDivider from 'components/atoms/LineDivider'
 import FeatureCard from 'components/molecules/Card/FeatureCard'
 import PageSentence from 'components/molecules/PageSentence'
+import PricingCard from 'components/molecules/Card/PricingCard'
+import ProjectCard from 'components/molecules/Card/ProjectCard'
 import SectionSentence from 'components/molecules/SectionSentence'
 import LogoList from 'components/organisms/LogoList'
+import TestimonialList from 'components/organisms/TestimonialList'
 import PageTemplate from 'components/templates/PageTemplate'
 import Image from 'next/image'
 import React from 'react'
@@ -23,6 +26,7 @@ const Home = () => {
     const script = document.createElement('script');
     script.src = 'https://assets.calendly.com/assets/external/widget.js';
     document.head.appendChild(script);
+
     return () => {
       document.head.removeChild(script);
     }
@@ -45,10 +49,14 @@ const Home = () => {
               badge="CLIENT-DEVELOPMENT-DRIVEN"
             />
           </div>
-          <div className="flex flex-col gap-6 sm:flex-row w-full sm:w-fit items-center justify-center"> {/* Add items-center and justify-center */}
+          <div className="flex flex-col gap-6 sm:flex-row w-full sm:w-fit">
             <ButtonLink value="Send Quote" href="/quote" />
-            <ButtonLink color="white"
-              style="light" value="Contact Us" href="/contact" />
+            {/* <ButtonLink
+              value="Learn More"
+              color="white"
+              style="light"
+              href="/about"
+            /> */}
           </div>
         </section>
         {/* Feature List */}
@@ -129,7 +137,34 @@ const Home = () => {
           </aside>
         </section>
         <LineDivider />
-       
+        {/* Our Projects */}
+        {/* <section className="flex flex-col gap-16 items-center">
+          <div
+            className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12"
+            data-aos="zoom-in-up"
+          >
+            <SectionSentence
+              title="We have completed many amazing projects that you will not believe"
+              badge="PROJECTS"
+            />
+          </div>
+          <div className="w-full grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5">
+            <div data-aos="flip-left">
+              <ProjectCard
+                title="The Desktop App Landing Page"
+                description="A landing page for desktop app"
+              />
+            </div>
+            <div data-aos="flip-right">
+              <ProjectCard
+                title="The Mobile App Landing Page"
+                description="A landing page for mobile app"
+                bottomSquareSize="big"
+              />
+            </div>
+          </div>
+        </section> */}
+        {/* Prices */}
         <section className="flex flex-col gap-16 items-center">
           <div
             className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12"
@@ -141,9 +176,57 @@ const Home = () => {
             />
               <div className="calendly-inline-widget" data-url="https://calendly.com/abdullahmujahidali1/15min" style={{ minWidth: '320px', height: '630px' }}></div>
           </div>
-        
+          {/* <div className="w-full grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"> */}
+            {/* <div data-aos="fade-up-right">
+              <PricingCard
+                price="1200$"
+                title="UI Design"
+                features={[
+                  '10 design pages',
+                  'Well-documented',
+                  '4 revisions',
+                  '$100/additional page',
+                ]}
+              />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300">
+              <PricingCard
+                price="5000$"
+                title="Development"
+                features={[
+                  'Web & Mobile',
+                  'Well-documented',
+                  '8 revisions',
+                  '$1000/additional page',
+                ]}
+              />
+            </div>
+            <div data-aos="fade-up-left">
+              <PricingCard
+                price="3000$"
+                title="Maintenance"
+                features={[
+                  'Daily backup',
+                  '3 hours of maintenance',
+                  'Including fixing',
+                  '$50/additional hour',
+                ]}
+              />
+            </div>
+          </div> */}
         </section>
-       
+        {/* Testimonial */}
+        {/* <section className="flex flex-col gap-16 items-center">
+          <div className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12" data-aos="zoom-in-up">
+            <SectionSentence
+              title="What do our clients say that we never let down?"
+              badge="TESTIMONIAL"
+            />
+          </div>
+          <div className="w-full" data-aos="fade-up">
+            <TestimonialList />
+          </div>
+        </section> */}
       </PageTemplate>
     </>
   )
