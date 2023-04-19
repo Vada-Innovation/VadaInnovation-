@@ -7,7 +7,11 @@ import Link from 'next/link'
 import React from 'react'
 import randomString from 'utils/randomString'
 
+import mixpanel from 'mixpanel-browser';
+
+
 const Blog = () => {
+  mixpanel.track('Blog Page');
   const blogListData: BlogCardProps[] = [
     {
       authorAvatarSrc: '/images/blog-author-1.svg',

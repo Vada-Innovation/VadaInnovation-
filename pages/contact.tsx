@@ -7,7 +7,12 @@ import PageTemplate from 'components/templates/PageTemplate'
 import React from 'react'
 import { FiMail, FiPhoneCall } from 'react-icons/fi'
 
+import mixpanel from 'mixpanel-browser';
+
+
 const Contact = () => {
+
+  mixpanel.track('Contact Page');
   return (
     <>
       <PageTemplate title='Contact - Vada Innovation'>

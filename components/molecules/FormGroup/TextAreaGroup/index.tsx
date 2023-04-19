@@ -1,19 +1,15 @@
-import TextArea, { TextAreaProps } from 'components/atoms/Form/Textarea'
+import TextArea from 'components/atoms/Form/Textarea'
 import Label from 'components/atoms/Label'
 import { useEffect, useState } from 'react'
 import randomString from 'utils/randomString'
 
-interface TextAreaGroupProps extends TextAreaProps {
+interface TextAreaGroupProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   label: string
 }
+
 const TextAreaGroup = ({
   label,
-  defaultValue,
-  onChange,
-  onSubmit,
-  required,
-  rows,
-  placeholder,
+  ...textareaProps
 }: TextAreaGroupProps) => {
   const [randomId, setRandomId] = useState<string>('')
   useEffect(() => {
@@ -22,14 +18,10 @@ const TextAreaGroup = ({
   return (
     <div className="space-y-1.5">
       <Label label={label} htmlFor={randomId} />
-      <TextArea
-        defaultValue={defaultValue}
+      <textarea
+      className="w-full bg-transparent border-borderLight text-white text-opacity-40 px-4 py-2 rounded focus:bg-light border      focus:border-white focus:border-opacity-30"
+        {...textareaProps}
         id={randomId}
-        onChange={onChange}
-        onSubmit={onSubmit}
-        placeholder={placeholder}
-        required={required}
-        rows={rows}
       />
     </div>
   )

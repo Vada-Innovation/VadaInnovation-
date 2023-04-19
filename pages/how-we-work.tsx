@@ -5,7 +5,10 @@ import PageTemplate from 'components/templates/PageTemplate'
 import Image from 'next/image'
 import React from 'react'
 
+import mixpanel from 'mixpanel-browser';
+
 const HowWeWork = () => {
+  mixpanel.track('How we Work Page');
   return (
     <PageTemplate>
       <section className="grid place-items-center">

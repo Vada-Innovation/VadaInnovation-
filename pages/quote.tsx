@@ -1,13 +1,54 @@
-import Button from 'components/atoms/Button'
-import ButtonLink from 'components/atoms/Button/ButtonLink'
-import InputGroup from 'components/molecules/FormGroup/InputGroup'
-import SelectGroup from 'components/molecules/FormGroup/SelectGroup'
-import TextAreaGroup from 'components/molecules/FormGroup/TextAreaGroup'
-import PageSentence from 'components/molecules/PageSentence'
-import PageTemplate from 'components/templates/PageTemplate'
-import React from 'react'
+import React, { useState } from 'react';
+import axios from 'axios';
+import mixpanel from 'mixpanel-browser';
+import Button from 'components/atoms/Button';
+import ButtonLink from 'components/atoms/Button/ButtonLink';
+import InputGroup from 'components/molecules/FormGroup/InputGroup';
+import SelectGroup from 'components/molecules/FormGroup/SelectGroup';
+import TextAreaGroup from 'components/molecules/FormGroup/TextAreaGroup';
+import PageSentence from 'components/molecules/PageSentence';
+import PageTemplate from 'components/templates/PageTemplate';
 
 const Quote = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [yourProblem, setYourProblem] = useState('');
+
+    // Phone number validation regex
+  const phoneRegex = /^(\+)?(\d{1,4})?[\s.-]?\(?(\d{1,3})\)?[\s.-]?(\d{1,3})[\s.-]?(\d{1,4})$/;
+
+  // Email validation regex
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  mixpanel.track('Quote Page');
+  const handleFormSubmit = () => {
+    mixpanel.track('Send Quote Form Submission', {
+      'Name': name,
+      'Email': email,
+      'Phone number': phoneNumber,
+      'Tell us your problem': yourProblem,
+    });
+    // Add any additional logic for form submission here
+
+    // console.log('Name: ', name, email, phoneNumber, yourProblem);
+
+    axios.post('https://eol2lhcifrly7ly.m.pipedream.net', {
+      name: name,
+      email: email,
+      phoneNumber: phoneNumber,
+      yourProblem: yourProblem,
+    }).then((response) => {
+      // console.log(response);
+    }).catch((error) => {
+      // console.log(error);
+    });
+    setName('');
+    setEmail('');
+    setPhoneNumber('');
+    setYourProblem('');
+  }
+;
   return (
     <>
       <PageTemplate title='Send Quote - Vada Innovation'>
@@ -32,11 +73,11 @@ const Quote = () => {
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full lg:flex lg:justify-end" data-aos="fade-up-left">
             <div className="grid grid-cols-1 gap-7 p-6 md:p-9 bg-light rounded-md lg:w-10/12 ">
               <div className="grid grid-cols-2 gap-4">
-                <InputGroup label="Name" />
-                <InputGroup label="Email" />
+                <InputGroup label="Name" value={name} onChange={(e) => setName(e.target.value)} />
+                <InputGroup label="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
               </div>
               <div className="grid grid-cols-1 gap-4">
-              <InputGroup label="Phone Number" />
+                <InputGroup label="Phone Number" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
                 {/* <InputGroup label="Company" />
                 <SelectGroup
                   label="Company Size"
@@ -47,8 +88,9 @@ const Quote = () => {
                   ]}
                 /> */}
               </div>
-              <TextAreaGroup label="Tell Us Your Problem" />
-              <Button value="Send Quote" />
+              <TextAreaGroup label="Tell Us Your Problem" 
+                value={yourProblem} onChange={(e) => setYourProblem(e.target.value)} />
+              <Button value="Send Quote" onClick={handleFormSubmit} />
             </div>
           </aside>
         </section>
@@ -57,4 +99,4 @@ const Quote = () => {
   )
 }
 
-export default Quote
+export default Quote;

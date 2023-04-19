@@ -7,8 +7,11 @@ import StatisticList from 'components/organisms/StatisticList'
 import PageTemplate from 'components/templates/PageTemplate'
 import Image from 'next/image'
 import React from 'react'
+import mixpanel from 'mixpanel-browser';
+
 
 const About = () => {
+  mixpanel.track('About Page');
   return (
     <PageTemplate title="About - Vada Innovation">
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 place-items-center">

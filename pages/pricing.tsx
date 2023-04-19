@@ -7,7 +7,10 @@ import Link from 'next/link'
 import React from 'react'
 import randomString from 'utils/randomString'
 
+import mixpanel from 'mixpanel-browser';
+
 const Pricing = () => {
+  mixpanel.track('Pricing Page');
   interface Faq {
     title: string
     description: string

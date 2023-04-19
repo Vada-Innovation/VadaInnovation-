@@ -14,7 +14,11 @@ import Link from 'next/link'
 import React, { useEffect, useRef, useState } from 'react'
 import randomString from 'utils/randomString'
 
+import mixpanel from 'mixpanel-browser';
+
+
 const BlogDetail = () => {
+  mixpanel.track('Blog Detail Page');
   const thumbnailContainer: React.LegacyRef<HTMLDivElement> = useRef(null)
   const [thumbnailSize, setThumbnailSize] = useState({
     width: 850,

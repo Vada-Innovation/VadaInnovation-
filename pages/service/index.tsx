@@ -18,7 +18,12 @@ import SmallCardIcon from 'components/molecules/Card/SmallCardIcon'
 import CardListIcon from 'components/molecules/Card/CardListIcon'
 import TextArrowLink from 'components/molecules/TextArrowLink'
 import IconListItem from 'components/molecules/IconListItem'
+
+import mixpanel from 'mixpanel-browser';
+
+
 const Services = () => {
+  mixpanel.track('Service Page');
   return (
     <>
       <PageTemplate title='Service - Vada Innovation'>

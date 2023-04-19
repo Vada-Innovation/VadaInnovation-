@@ -7,7 +7,12 @@ import PageTemplate from 'components/templates/PageTemplate'
 import React from 'react'
 import randomString from 'utils/randomString'
 
+import mixpanel from 'mixpanel-browser';
+
+
 const ProjectDetail = () => {
+
+  mixpanel.track('Project Detail Page');
   interface Project {
     title: string
     description: string

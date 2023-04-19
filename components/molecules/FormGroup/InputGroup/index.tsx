@@ -1,18 +1,13 @@
-import Input, { InputProps } from 'components/atoms/Form/Input'
 import Label from 'components/atoms/Label'
 import { useEffect, useState } from 'react'
 import randomString from 'utils/randomString'
 
-interface InputGroupProps extends InputProps {
+interface InputGroupProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label: string
 }
 const InputGroup = ({
   label,
-  defaultValue,
-  onChange,
-  onSubmit,
-  required,
-  placeholder,
+  ...inputProps
 }: InputGroupProps) => {
   const [randomId, setRandomId] = useState<string>('')
   useEffect(() => {
@@ -21,13 +16,10 @@ const InputGroup = ({
   return (
     <div className="space-y-1.5">
       <Label label={label} htmlFor={randomId} />
-      <Input
-        defaultValue={defaultValue}
+      <input
+       className="w-full bg-transparent border-borderLight text-white text-opacity-40 px-4 py-2 rounded focus:bg-light border      focus:border-white focus:border-opacity-30"
+        {...inputProps}
         id={randomId}
-        onChange={onChange}
-        onSubmit={onSubmit}
-        placeholder={placeholder}
-        required={required}
       />
     </div>
   )

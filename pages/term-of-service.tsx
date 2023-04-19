@@ -4,7 +4,11 @@ import PageSentence from 'components/molecules/PageSentence'
 import PageTemplate from 'components/templates/PageTemplate'
 import React from 'react'
 
+import mixpanel from 'mixpanel-browser';
+
+
 const TermOfService = () => {
+  mixpanel.track('Term of Service Page');
   return (
     <PageTemplate>
       <section className="space-y-6 text-center" data-aos="zoom-in-up">

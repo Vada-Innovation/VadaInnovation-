@@ -6,7 +6,10 @@ import PageTemplate from 'components/templates/PageTemplate'
 import React, { useEffect, useState } from 'react'
 import getRandomItemsFromArray from 'utils/getRandomItemsFromArray'
 
+import mixpanel from 'mixpanel-browser';
+
 const Faq = () => {
+  mixpanel.track('Faq Page');
   const faqs = [
     {
       title: `How is the payment system?`,

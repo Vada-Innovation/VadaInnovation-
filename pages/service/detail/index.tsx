@@ -18,7 +18,12 @@ import {
 } from 'react-icons/fi'
 import randomString from 'utils/randomString'
 
+import mixpanel from 'mixpanel-browser';
+
+
 const ServiceDetail = () => {
+
+  mixpanel.track('Service Detail Page');
   interface Faq {
     title: string
     description: string

@@ -15,7 +15,12 @@ import PageTemplate from 'components/templates/PageTemplate'
 import Image from 'next/image'
 import React from 'react'
 import { FiFigma, FiCode, FiBox } from 'react-icons/fi'
+
+import mixpanel from 'mixpanel-browser';
+
+
 const Home = () => {
+  mixpanel.track('Home Page');
 
   useEffect(() => {
     const script = document.createElement('script');
