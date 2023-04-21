@@ -62,8 +62,8 @@ const ServiceDetail = () => {
       icon: <FiFigma />,
     },
     {
-      title: 'Same Day',
-      description: `We don't want you to wait long. Everything will be finished on the same day.`,
+      title: 'On time Delivery',
+      description: `We don't want you to wait long. Everything will be finished on time.`,
       icon: <FiClock />,
     },
     {
