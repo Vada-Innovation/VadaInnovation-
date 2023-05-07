@@ -23,9 +23,10 @@ const Home = () => {
     const script = document.createElement('script');
     script.src = 'https://assets.calendly.com/assets/external/widget.js';
     document.head.appendChild(script);
+
     return () => {
       document.head.removeChild(script);
-    }
+    };
   }, []);
   return (
     <>
