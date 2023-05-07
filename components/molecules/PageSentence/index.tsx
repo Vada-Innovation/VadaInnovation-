@@ -28,7 +28,7 @@ const PageSentence = ({
               }
             />
           )}
-          {title == '' ? '' : <Text value={title} textStyle="PageTitle" />}
+          {title == '' ? '' : <h1 className="text-white font-bold text-4xl leading-13.5" >{title}</h1>}
         </div>
       )}
       {description == '' ? (
